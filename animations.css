@@ -1,0 +1,39 @@
+.experience { animation: scene-arrive .9s ease-out both; }
+.intro { animation: title-arrive .85s .16s ease-out both; }
+.book-area { animation: book-arrive 1.1s .3s cubic-bezier(.2,.78,.25,1) both; }
+.controls, .keyboard-hint { animation: controls-arrive .65s .8s ease-out both; }
+
+.book-frame:hover .book:not(.is-turning) { transform: translateY(-3px) rotateX(.25deg); }
+
+.turning-sheet { transition: transform .9s cubic-bezier(.645,.045,.355,1); }
+.turning-sheet--forward.is-flipping { transform: rotateY(-180deg); }
+.turning-sheet--backward.is-flipping { transform: rotateY(180deg); }
+
+@keyframes scene-arrive {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes title-arrive {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes book-arrive {
+  from { opacity: 0; transform: translateY(19px) scale(.965); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes controls-arrive {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
