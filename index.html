@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#303d68">
+    <meta name="description" content="A gentle friendship scrapbook for Nivi, with reminders to breathe, rest, and take life one little step at a time.">
+    <title>A Little Place to Breathe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/scrapbook-data.js" defer></script>
+    <script src="js/scrapbook.js" defer></script>
+  </head>
+  <body>
+    <main class="experience" id="experience">
+      <header class="topbar" aria-label="Scrapbook details">
+        <span class="topbar__mark" aria-hidden="true">✳</span>
+        <span class="topbar__label">A LITTLE PLACE TO BREATHE</span>
+        <span class="topbar__date">MADE WITH CARE</span>
+      </header>
+
+      <section class="intro" aria-labelledby="title">
+        <h1 id="title">Love Story</h1>
+        <p>For Nivi — a little reminder that you matter, always. <span aria-hidden="true">✦</span></p>
+      </section>
+
+      <section class="book-area" aria-label="Interactive scrapbook">
+        <div class="book-shadow" aria-hidden="true"></div>
+        <div class="book-frame">
+          <div class="book" id="book" aria-live="polite">
+            <div class="book-pages-under" id="underSpread" aria-hidden="true"></div>
+            <div class="book-spread" id="spread"></div>
+            <div class="turn-layer" id="turnLayer" aria-hidden="true"></div>
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="page-stack page-stack--left" aria-hidden="true"></div>
+            <div class="page-stack page-stack--right" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="controls" aria-label="Scrapbook navigation">
+        <button class="control" id="previous" type="button" aria-label="Previous spread" title="Previous spread">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <span class="spread-count" id="spreadCount" aria-live="polite">01 <i>/</i> 10</span>
+        <button class="control" id="next" type="button" aria-label="Next spread" title="Next spread">
+          <span aria-hidden="true">›</span>
+        </button>
+        <span class="control-divider" aria-hidden="true"></span>
+        <button class="control control--utility" id="autoplay" type="button" aria-label="Start autoplay" title="Play scrapbook">
+          <span aria-hidden="true">▶</span>
+        </button>
+        <button class="control control--utility" id="reset" type="button" aria-label="Return to the first spread" title="Return to beginning">
+          <span aria-hidden="true">↺</span>
+        </button>
+      </nav>
+      <p class="keyboard-hint">use your arrow keys to wander through the pages</p>
+      <span class="corner-flower" aria-hidden="true">✿</span>
+    </main>
+    <dialog class="comfort-dialog" id="comfortDialog" aria-labelledby="comfortTitle">
+      <button class="comfort-dialog__close" id="closeComfort" type="button" aria-label="Close comfort note">×</button>
+      <span class="comfort-dialog__flower" aria-hidden="true">✿</span>
+      <h2 id="comfortTitle"></h2>
+      <p id="comfortMessage"></p>
+      <span class="comfort-dialog__foot">take your time ♡</span>
+    </dialog>
+  </body>
+</html>
